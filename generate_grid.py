@@ -6,13 +6,13 @@ from numpy import *
 
 grid=Dataset('diffusion_cylinder.nc','w')
 
-grid.createDimension('x',5)
-grid.createDimension('y',32)
+grid.createDimension('x',36)
+grid.createDimension('y',5)
 
 grid.createVariable('nx','i4',())
 grid.createVariable('ny','i4',())
-grid.variables['nx'][:]=5
-grid.variables['ny'][:]=32
+grid.variables['nx'][:]=36
+grid.variables['ny'][:]=5
 
 dx=grid.createVariable('dx','f4',('x','y',))
 dy=grid.createVariable('dy','f4',('x','y',))
@@ -38,8 +38,8 @@ g23[:,:]=0.0
 g11[:,:]=1.0
 g22[:,:]=1.0
 
-r=np.arange(0.05,1.65,0.05)
-for i in range(32):
-  g33[:,i]=r[i]**(-2)
+r=np.arange(0.05,1.85,0.05)
+for i in range(36):
+  g33[i,:]=r[i]**(-2)
 
 grid.close()

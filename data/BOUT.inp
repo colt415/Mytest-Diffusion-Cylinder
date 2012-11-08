@@ -19,14 +19,14 @@ dump_format="nc"
 
 [ddx]
 
-first=C2
-second=C2
+first=C4
+second=C4
 upwind=U1
 
 [ddy]
 
-first=C4
-second=C4
+first=C2
+second=C2
 upwind=U1
 
 [ddz]
@@ -43,12 +43,12 @@ RTOL=1.0e-5
 [All]
 scale=0.0
 
-xs_opt=0
-ys_opt=1
+xs_opt=1
+ys_opt=0
 zs_opt=0
 
-ys_s0=0.0
-ys_wd=0.2
+xs_s0=0.0
+xs_wd=0.2
 
 bndry_all=neumann
 
