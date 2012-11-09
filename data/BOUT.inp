@@ -54,3 +54,4 @@ bndry_all=neumann
 
 [temperature]
 scale=1.0
+function=cos(2*z)
